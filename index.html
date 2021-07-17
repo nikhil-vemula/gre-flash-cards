@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GRE Flash cards</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2><a href="javascript: void(0)" onclick="toggleControls()">GRE Flash cards</a></h2>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <div id="controlsContainer" style="display: none;">
+        <button id="authorize_button" style="display: none;">Authorize</button>
+        <button id="signout_button" style="display: none;">Sign Out</button>
+        <button id="reload_data" onclick="loadWordsFromGoogleSheet()" >Reload</button>
+    </div>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+    <div id="mainContainer">
+        <div id="flashCardContainer">
+            <div class="card">
+                Loading...
+            </div>
+        </div>
+    <label>Go to word number: </label><input type='number' onchange="goToWord(parseInt(this.value))" />
+    </div>
+
+    <script src="script.js"></script> 
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>
