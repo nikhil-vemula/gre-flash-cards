@@ -1,77 +1,90 @@
 #flashCardContainer {
-    height: 440px;
-    width: 400px;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    overflow: hidden;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  height: 440px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .card {
-    padding: 10px;
-    margin: 10px;
-    font-size: xx-large;
-    height: 400px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+  padding: 10px;
+  margin: 10px;
+  font-size: xx-large;
+  height: 400px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card > .front-card {
-    margin: auto;
-    display: grid;
-    place-items: center;
+  margin: auto;
+  display: grid;
+  place-items: center;
 }
 
 .card > .back-card {
-    margin: auto;
-    display: grid;
-    place-items: center;
+  margin: auto;
+  display: grid;
+  place-items: center;
 }
 
 .card > .back-card > div {
-    margin: 10px;
-    font-size: x-large;
-    text-align: center;
+  margin: 10px;
+  font-size: x-large;
+  text-align: center;
 }
 
-.card.show-front > .front-card{
-    display: block;
+.card.show-front > .front-card {
+  display: block;
 }
 
-.card.show-front > .front-card{
-    display: block;
+.card.show-front > .front-card {
+  display: block;
 }
 
-
-.card.show-front > .back-card{
-    display: none;
+.card.show-front > .back-card {
+  display: none;
 }
 
-.card.show-back > .front-card{
-    display: none;
+.card.show-back > .front-card {
+  display: none;
 }
 
-.card.show-back > .back-card{
-    display: block;
+.card.show-back > .back-card {
+  display: block;
 }
 
 .card > .card-controls {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .card > .card-controls > .control {
-    font-size: x-large;
-    margin: 10px;
+  font-size: x-large;
+  margin: 10px;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+  #flashCardContainer {
+    height: 340px;
+    width: 300px;
+  }
+
+  .card {
+    height: 300px;
+    width: 250px;
+  }
 }
