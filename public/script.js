@@ -213,7 +213,6 @@ function getCurrentCardNumber() {
 }
 
 function saveCurrentCardNumber() {
-    debugger;
     try {
         localStorage.setItem('gre_current_word_number', currentSlide);
     } catch(e) {
