@@ -189,9 +189,10 @@ var endWindow = startWindow + numberOfCardsToRender;
 var mode = 'recall';
 
 document.addEventListener('keydown', function (event) {
-    if (event.code == 'KeyZ') {
+    console.log(event)
+    if (event.code == 'KeyZ' || event.code == 'ArrowLeft') {
         showPreviousCard();
-    } else if (event.code == 'KeyX') {
+    } else if (event.code == 'KeyX' || event.code == 'ArrowRight') {
         showNextCard();
     } else if (event.code == 'Space') {
         flipCard();
